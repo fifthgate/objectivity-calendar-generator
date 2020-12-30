@@ -33,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Fifthgate\\CalendarGenerator\\FidgetCMSServiceProvider"
+                "Fifthgate\\CalendarGenerator\\CalendarGeneratorServiceProvider"
             ]
         }
     },
