@@ -1,8 +1,8 @@
 <?php
 
-namespace Services\CalendarGenerator\Service\Interfaces;
+namespace Fifthgate\CalendarService\Service\Interfaces;
 
-use Services\CalendarGenerator\Domain\Interfaces\CalendarYearInterface;
+use Fifthgate\CalendarService\Domain\Interfaces\CalendarYearInterface;
 
 interface CalendarGeneratorServiceInterface
 {

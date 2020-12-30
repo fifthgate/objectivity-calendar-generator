@@ -65,6 +65,6 @@ class CalendarServiceTestCase extends BaseTestCase
 	}
 
     protected function getPackageProviders($app) {
-	    return ['Fifthgate\CalendarService\CalendarServiceProvider'];
+	    return ['Fifthgate\CalendarService\CalendarGeneratorServiceProvider'];
 	}
 }

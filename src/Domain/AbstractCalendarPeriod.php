@@ -1,6 +1,6 @@
 <?php
 
-namespace Services\CalendarGenerator\Domain;
+namespace Fifthgate\CalendarService\Domain;
 
 use Services\CalendarGenerator\Domain\Interfaces\CalendarPeriodInterface;
 use Services\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
