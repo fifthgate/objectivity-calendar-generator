@@ -1,11 +1,41 @@
 <?php
 
-namespace Fifthgate\Calendarservice\Tests;
+namespace Fifthgate\CalendarGenerator\Tests;
 
 use Orchestra\Testbench\BrowserKit\TestCase as BaseTestCase;
 
+
 class CalendarServiceTestCase extends BaseTestCase
 {
+	protected function generateTestEvents(int $year) : CalendarRenderableEventCollectionInterface
+    {
+        $eventCollection = new CalendarEventCollection;
+        $testData = [
+            [
+                'title' => 'Event 1',
+                'body' => '<p>Lorem Ipsum Dolor sit amet</p>',
+                'startDate' => '01-01-'.$year,
+                'endDate' => '02-01-'.$year
+            ],
+            [
+                'title' => 'Event 2',
+                'body' => '<p>Lorem Ipsum Dolor sit amet</p>',
+                'startDate' => '12-12-'.$year,
+                'endDate' => '21-12-'.$year
+            ],
+        ];
+
+        foreach ($testData as $testDatum) {
+            $eventCollection->add(new GenericCalendarEvent(
+                $testDatum['title'],
+                $testDatum['body'],
+                new Carbon($testDatum['startDate']),
+                new Carbon($testDatum['endDate'])
+            ));
+        }
+        return $eventCollection;
+    }
+
 	public $baseUrl = 'http://localhost';
 
     /**
@@ -35,13 +65,6 @@ class CalendarServiceTestCase extends BaseTestCase
 	}
 
     protected function getPackageProviders($app) {
-	    return ['Fifthgate\GDPR\GDPRServiceProvider'];
-	}
-
-	/**
-	 * Setup the test environment.
-	 */
-	protected function setUp(): void {
-	    parent::setUp();
+	    return ['Fifthgate\CalendarService\CalendarServiceProvider'];
 	}
 }
