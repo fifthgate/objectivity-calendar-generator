@@ -5,6 +5,10 @@ namespace Fifthgate\CalendarGenerator\Tests;
 use Orchestra\Testbench\BrowserKit\TestCase as BaseTestCase;
 use Fifthgate\CalendarGenerator\CalendarGeneratorServiceProvider;
 use Fifthgate\CalendarGenerator\Service\Interfaces\CalendarGeneratorServiceInterface;
+use Fifthgate\CalendarGenerator\Domain\Collection\CalendarEventCollection;
+use Fifthgate\CalendarGenerator\Domain\GenericCalendarEvent;
+use Carbon\Carbon;
+use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
 
 class CalendarServiceTestCase extends BaseTestCase
 {

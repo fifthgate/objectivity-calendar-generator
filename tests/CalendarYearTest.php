@@ -6,11 +6,11 @@ use Fifthgate\CalendarGenerator\Tests\CalendarServiceTestCase;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Services\CalendarGenerator\Domain\Interfaces\CalendarYearInterface;
-use Services\CalendarGenerator\Domain\Collection\Interfaces\CalendarMonthCollectionInterface;
-use Services\CalendarGenerator\Domain\Collection\CalendarEventCollection;
-use Services\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
-use Services\CalendarGenerator\Domain\Interfaces\CalendarRenderableEventInterface;
+use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarYearInterface;
+use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarMonthCollectionInterface;
+use Fifthgate\CalendarGenerator\Domain\Collection\CalendarEventCollection;
+use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
+use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarRenderableEventInterface;
 
 class CalendarYearTest extends CalendarServiceTestCase
 {

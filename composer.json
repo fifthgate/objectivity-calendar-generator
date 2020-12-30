@@ -11,7 +11,9 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^7.2"
+        "guzzlehttp/guzzle": "^7.2",
+        "fifthgate/objectivity": "^0.1.0",
+        "nesbot/carbon": "^2.43"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.3.3",
@@ -34,5 +36,11 @@
                 "Fifthgate\\CalendarGenerator\\FidgetCMSServiceProvider"
             ]
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/fifthgate/objectivity"
+        }
+    ]
 }

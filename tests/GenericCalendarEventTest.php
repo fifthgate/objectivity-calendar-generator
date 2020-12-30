@@ -6,7 +6,7 @@ use Fifthgate\CalendarGenerator\Tests\CalendarServiceTestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-use Services\CalendarGenerator\Domain\GenericCalendarEvent;
+use Fifthgate\CalendarGenerator\Domain\GenericCalendarEvent;
 use Carbon\Carbon;
 use \DateTimeInterface;
 
