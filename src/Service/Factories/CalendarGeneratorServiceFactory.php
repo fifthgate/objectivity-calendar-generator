@@ -1,12 +1,12 @@
 <?php
 
-namespace Fifthgate\CalendarService\Service\Factories;
+namespace Fifthgate\CalendarGenerator\Service\Factories;
 
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application as ApplicationContract;
-use Fifthgate\CalendarService\Service\CalendarGeneratorService;
+use Fifthgate\CalendarGenerator\Service\CalendarGeneratorService;
 
 class CalendarGeneratorServiceFactory
 {

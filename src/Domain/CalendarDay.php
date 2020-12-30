@@ -1,10 +1,10 @@
 <?php
 
-namespace Fifthgate\CalendarService\Domain;
+namespace Fifthgate\CalendarGenerator\Domain;
 
-use Services\CalendarGenerator\Domain\Interfaces\CalendarDayInterface;
-use Services\CalendarGenerator\Domain\AbstractCalendarPeriod;
-use Services\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
+use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarDayInterface;
+use Fifthgate\CalendarGenerator\Domain\AbstractCalendarPeriod;
+use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
 use \DateTimeInterface;
 
 class CalendarDay extends AbstractCalendarPeriod implements CalendarDayInterface

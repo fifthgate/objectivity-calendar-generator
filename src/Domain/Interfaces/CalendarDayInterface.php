@@ -1,8 +1,8 @@
 <?php
 
-namespace Services\CalendarGenerator\Domain\Interfaces;
+namespace Fifthgate\CalendarGenerator\Domain\Interfaces;
 
-use Services\CalendarGenerator\Domain\Interfaces\CalendarPeriodInterface;
+use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarPeriodInterface;
 use \DateTimeInterface;
 
 interface CalendarDayInterface extends CalendarPeriodInterface

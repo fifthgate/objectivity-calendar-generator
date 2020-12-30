@@ -1,11 +1,11 @@
 <?php
 
-namespace Services\CalendarGenerator\Domain\Interfaces;
+namespace Fifthgate\CalendarGenerator\Domain\Interfaces;
 
-use Services\CalendarGenerator\Domain\Interfaces\CalendarPeriodInterface;
-use Services\CalendarGenerator\Domain\Collection\Interfaces\CalendarDayCollectionInterface;
-use Services\CalendarGenerator\Domain\Collection\Interfaces\CalendarWeekCollectionInterface;
-use Services\CalendarGenerator\Domain\Interfaces\CalendarDayInterface;
+use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarPeriodInterface;
+use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarDayCollectionInterface;
+use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarWeekCollectionInterface;
+use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarDayInterface;
 
 interface CalendarMonthInterface extends CalendarPeriodInterface
 {

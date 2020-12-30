@@ -1,6 +1,6 @@
 <?php
 
-namespace Services\CalendarGenerator\Domain\Interfaces;
+namespace Fifthgate\CalendarGenerator\Domain\Interfaces;
 
 use \DateTimeInterface;
 

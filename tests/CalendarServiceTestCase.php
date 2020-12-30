@@ -3,10 +3,13 @@
 namespace Fifthgate\CalendarGenerator\Tests;
 
 use Orchestra\Testbench\BrowserKit\TestCase as BaseTestCase;
-
+use Fifthgate\CalendarGenerator\CalendarGeneratorServiceProvider;
+use Fifthgate\CalendarGenerator\Service\Interfaces\CalendarGeneratorServiceInterface;
 
 class CalendarServiceTestCase extends BaseTestCase
 {
+    protected $calendarService;
+
 	protected function generateTestEvents(int $year) : CalendarRenderableEventCollectionInterface
     {
         $eventCollection = new CalendarEventCollection;
@@ -60,11 +63,13 @@ class CalendarServiceTestCase extends BaseTestCase
 	 * Setup the test environment.
 	 */
 	protected function setUp(): void {
+        
 	    parent::setUp();
 	    $this->loadLaravelMigrations();
+        $this->calendarService = $this->app->get(CalendarGeneratorServiceInterface::class);
 	}
 
     protected function getPackageProviders($app) {
-	    return ['Fifthgate\CalendarService\CalendarGeneratorServiceProvider'];
+        return [CalendarGeneratorServiceProvider::class];
 	}
 }

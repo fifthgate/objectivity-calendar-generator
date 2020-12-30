@@ -1,9 +1,9 @@
 <?php
 
-namespace Fifthgate\CalendarService\Domain;
+namespace Fifthgate\CalendarGenerator\Domain;
 
-use Services\CalendarGenerator\Domain\Interfaces\CalendarPeriodInterface;
-use Services\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
+use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarPeriodInterface;
+use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
 use \DateTimeInterface;
 
 abstract class AbstractCalendarPeriod implements CalendarPeriodInterface

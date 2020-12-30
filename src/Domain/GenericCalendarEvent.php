@@ -1,8 +1,8 @@
 <?php
 
-namespace Fifthgate\CalendarService\Domain;
+namespace Fifthgate\CalendarGenerator\Domain;
 
-use Services\CalendarGenerator\Domain\Interfaces\CalendarRenderableEventInterface;
+use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarRenderableEventInterface;
 use \DateTimeInterface;
 use Services\Core\Domain\Interfaces\DomainEntityInterface;
 use Services\Core\Domain\AbstractDomainEntity;

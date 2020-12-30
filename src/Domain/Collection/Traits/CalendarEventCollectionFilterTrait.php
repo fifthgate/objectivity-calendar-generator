@@ -1,9 +1,9 @@
 <?php
 
-namespace Services\CalendarGenerator\Domain\Collection\Traits;
+namespace Fifthgate\CalendarGenerator\Domain\Collection\Traits;
 
 use \DateTimeInterface;
-use Services\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
+use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
 
 /**
  * @codeCoverageIgnore

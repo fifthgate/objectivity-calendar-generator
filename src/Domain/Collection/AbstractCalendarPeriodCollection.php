@@ -1,9 +1,9 @@
 <?php
 
-namespace Services\CalendarGenerator\Domain\Collection;
+namespace Fifthgate\CalendarGenerator\Domain\Collection;
 
-use Services\CalendarGenerator\Domain\Collection\Interfaces\CalendarPeriodCollectionInterface;
-use Services\CalendarGenerator\Domain\Interfaces\CalendarPeriodInterface;
+use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarPeriodCollectionInterface;
+use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarPeriodInterface;
 
 /**
  * @codeCoverageIgnore

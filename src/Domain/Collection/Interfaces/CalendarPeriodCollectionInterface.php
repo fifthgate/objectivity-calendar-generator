@@ -1,9 +1,9 @@
 <?php
 
-namespace Services\CalendarGenerator\Domain\Collection\Interfaces;
+namespace Fifthgate\CalendarGenerator\Domain\Collection\Interfaces;
 
 use \Iterator;
-use Services\CalendarGenerator\Domain\Interfaces\CalendarPeriodInterface;
+use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarPeriodInterface;
 
 interface CalendarPeriodCollectionInterface extends Iterator
 {

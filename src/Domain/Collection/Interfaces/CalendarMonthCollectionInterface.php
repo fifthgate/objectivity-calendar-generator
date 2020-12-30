@@ -1,6 +1,6 @@
 <?php
 
-namespace Services\CalendarGenerator\Domain\Collection\Interfaces;
+namespace Fifthgate\CalendarGenerator\Domain\Collection\Interfaces;
 
 use \Iterator;
 
