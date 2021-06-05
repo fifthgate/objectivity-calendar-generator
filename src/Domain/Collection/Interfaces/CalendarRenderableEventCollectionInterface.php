@@ -3,7 +3,7 @@
 namespace Fifthgate\CalendarGenerator\Domain\Collection\Interfaces;
 
 use \DateTimeInterface;
-use Fifthgate\Objectivity\Domain\Collection\Interfaces\DomainEntityCollectionInterface;
+use Fifthgate\Objectivity\Core\Domain\Collection\Interfaces\DomainEntityCollectionInterface;
 
 interface CalendarRenderableEventCollectionInterface extends DomainEntityCollectionInterface
 {

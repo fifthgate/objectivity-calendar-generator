@@ -4,8 +4,8 @@ namespace Fifthgate\CalendarGenerator\Domain;
 
 use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarRenderableEventInterface;
 use \DateTimeInterface;
-use Fifthgate\Objectivity\Domain\Interfaces\DomainEntityInterface;
-use Fifthgate\Objectivity\Domain\AbstractDomainEntity;
+use Fifthgate\Objectivity\Core\Domain\Interfaces\DomainEntityInterface;
+use Fifthgate\Objectivity\Core\Domain\AbstractDomainEntity;
 
 class GenericCalendarEvent extends AbstractDomainEntity implements CalendarRenderableEventInterface, DomainEntityInterface
 {

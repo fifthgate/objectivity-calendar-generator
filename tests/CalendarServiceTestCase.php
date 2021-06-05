@@ -2,7 +2,7 @@
 
 namespace Fifthgate\CalendarGenerator\Tests;
 
-use Orchestra\Testbench\BrowserKit\TestCase as BaseTestCase;
+use Orchestra\Testbench\TestCase as BaseTestCase;
 use Fifthgate\CalendarGenerator\CalendarGeneratorServiceProvider;
 use Fifthgate\CalendarGenerator\Service\Interfaces\CalendarGeneratorServiceInterface;
 use Fifthgate\CalendarGenerator\Domain\Collection\CalendarEventCollection;
@@ -14,7 +14,7 @@ class CalendarServiceTestCase extends BaseTestCase
 {
     protected $calendarService;
 
-	protected function generateTestEvents(int $year) : CalendarRenderableEventCollectionInterface
+    protected function generateTestEvents(int $year) : CalendarRenderableEventCollectionInterface
     {
         $eventCollection = new CalendarEventCollection;
         $testData = [
@@ -43,37 +43,39 @@ class CalendarServiceTestCase extends BaseTestCase
         return $eventCollection;
     }
 
-	public $baseUrl = 'http://localhost';
+    public $baseUrl = 'http://localhost';
 
     /**
-	 * Define environment setup.
-	 *
-	 * @param  \Illuminate\Foundation\Application  $app
-	 * @return void
-	 */
-	protected function getEnvironmentSetUp($app)
-	{
-		$app['config']->set('key', 'base64:j84cxCjod/fon4Ks52qdMKiJXOrO5OSDBpXjVUMz61s=');
-	    // Setup default database to use sqlite :memory:
-	    $app['config']->set('database.default', 'testbench');
-	    $app['config']->set('database.connections.testbench', [
-	        'driver'   => 'sqlite',
-	        'database' => ':memory:',
-	        'prefix'   => '',
-	    ]);
-	}
+     * Define environment setup.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     * @return void
+     */
+    protected function getEnvironmentSetUp($app)
+    {
+        $app['config']->set('key', 'base64:j84cxCjod/fon4Ks52qdMKiJXOrO5OSDBpXjVUMz61s=');
+        // Setup default database to use sqlite :memory:
+        $app['config']->set('database.default', 'testbench');
+        $app['config']->set('database.connections.testbench', [
+            'driver'   => 'sqlite',
+            'database' => ':memory:',
+            'prefix'   => '',
+        ]);
+    }
 
-	/**
-	 * Setup the test environment.
-	 */
-	protected function setUp(): void {
+    /**
+     * Setup the test environment.
+     */
+    protected function setUp(): void
+    {
         
-	    parent::setUp();
-	    $this->loadLaravelMigrations();
+        parent::setUp();
+        $this->loadLaravelMigrations();
         $this->calendarService = $this->app->get(CalendarGeneratorServiceInterface::class);
-	}
+    }
 
-    protected function getPackageProviders($app) {
+    protected function getPackageProviders($app)
+    {
         return [CalendarGeneratorServiceProvider::class];
-	}
+    }
 }
