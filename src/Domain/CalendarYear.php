@@ -1,12 +1,12 @@
 <?php
 
-namespace Fifthgate\CalendarGenerator\Domain;
+namespace Fifthgate\Objectivity\CalendarGenerator\Domain;
 
-use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarYearInterface;
-use Fifthgate\CalendarGenerator\Domain\AbstractCalendarPeriod;
-use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarMonthCollectionInterface;
-use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
-use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarMonthInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarYearInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\AbstractCalendarPeriod;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarMonthCollectionInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarMonthInterface;
 
 class CalendarYear extends AbstractCalendarPeriod implements CalendarYearInterface
 {

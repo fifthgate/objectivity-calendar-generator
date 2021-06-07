@@ -1,14 +1,14 @@
 <?php
 
-namespace Fifthgate\CalendarGenerator\Tests;
+namespace Fifthgate\Objectivity\CalendarGenerator\Tests;
 
 use Orchestra\Testbench\TestCase as BaseTestCase;
-use Fifthgate\CalendarGenerator\CalendarGeneratorServiceProvider;
-use Fifthgate\CalendarGenerator\Service\Interfaces\CalendarGeneratorServiceInterface;
-use Fifthgate\CalendarGenerator\Domain\Collection\CalendarEventCollection;
-use Fifthgate\CalendarGenerator\Domain\GenericCalendarEvent;
+use Fifthgate\Objectivity\CalendarGenerator\CalendarGeneratorServiceProvider;
+use Fifthgate\Objectivity\CalendarGenerator\Service\Interfaces\CalendarGeneratorServiceInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\CalendarEventCollection;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\GenericCalendarEvent;
 use Carbon\Carbon;
-use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
 
 class CalendarServiceTestCase extends BaseTestCase
 {

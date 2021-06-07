@@ -5,12 +5,12 @@ namespace Tests\Feature\Calendar;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-use Fifthgate\CalendarGenerator\Domain\CalendarMonth;
-use Fifthgate\CalendarGenerator\Service\CalendarGeneratorService;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\CalendarMonth;
+use Fifthgate\Objectivity\CalendarGenerator\Service\CalendarGeneratorService;
 use Carbon\Carbon;
-use Fifthgate\CalendarGenerator\Tests\CalendarServiceTestCase;
-use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
-use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarRenderableEventInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Tests\CalendarServiceTestCase;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarRenderableEventInterface;
 
 class CalendarWeekTest extends CalendarServiceTestCase
 {

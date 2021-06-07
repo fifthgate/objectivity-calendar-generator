@@ -1,14 +1,14 @@
 <?php
 
-namespace Fifthgate\CalendarGenerator\Domain;
+namespace Fifthgate\Objectivity\CalendarGenerator\Domain;
 
-use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarMonthInterface;
-use Fifthgate\CalendarGenerator\Domain\AbstractCalendarPeriod;
-use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarDayCollectionInterface;
-use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarWeekCollectionInterface;
-use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
-use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarDayInterface;
-use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarWeekInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarMonthInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\AbstractCalendarPeriod;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarDayCollectionInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarWeekCollectionInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarDayInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarWeekInterface;
 
 class CalendarMonth extends AbstractCalendarPeriod implements CalendarMonthInterface
 {

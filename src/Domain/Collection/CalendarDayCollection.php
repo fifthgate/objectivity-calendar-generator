@@ -1,9 +1,9 @@
 <?php
 
-namespace Fifthgate\CalendarGenerator\Domain\Collection;
+namespace Fifthgate\Objectivity\CalendarGenerator\Domain\Collection;
 
-use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarDayCollectionInterface;
-use Fifthgate\CalendarGenerator\Domain\Collection\AbstractCalendarPeriodCollection;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarDayCollectionInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\AbstractCalendarPeriodCollection;
 
 class CalendarDayCollection extends AbstractCalendarPeriodCollection implements CalendarDayCollectionInterface
 {

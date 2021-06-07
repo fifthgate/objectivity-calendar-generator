@@ -1,12 +1,12 @@
 <?php
 
-namespace Fifthgate\CalendarGenerator;
+namespace Fifthgate\Objectivity\CalendarGenerator;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Fifthgate\CalendarGenerator\Service\CalendarGeneratorService;
-use Fifthgate\CalendarGenerator\Service\Factories\CalendarGeneratorServiceFactory;
-use Fifthgate\CalendarGenerator\Service\Interfaces\CalendarGeneratorServiceInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Service\CalendarGeneratorService;
+use Fifthgate\Objectivity\CalendarGenerator\Service\Factories\CalendarGeneratorServiceFactory;
+use Fifthgate\Objectivity\CalendarGenerator\Service\Interfaces\CalendarGeneratorServiceInterface;
 
 class CalendarGeneratorServiceProvider extends ServiceProvider
 {

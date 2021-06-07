@@ -2,15 +2,15 @@
 
 namespace Tests\Feature\Calendar;
 
-use Fifthgate\CalendarGenerator\Tests\CalendarServiceTestCase;
+use Fifthgate\Objectivity\CalendarGenerator\Tests\CalendarServiceTestCase;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarYearInterface;
-use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarMonthCollectionInterface;
-use Fifthgate\CalendarGenerator\Domain\Collection\CalendarEventCollection;
-use Fifthgate\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
-use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarRenderableEventInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarYearInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarMonthCollectionInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\CalendarEventCollection;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarRenderableEventInterface;
 
 class CalendarYearTest extends CalendarServiceTestCase
 {

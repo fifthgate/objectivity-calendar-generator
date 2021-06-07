@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use Tests\CalendarGeneratorServiceTestCase;
-use Fifthgate\CalendarGenerator\Tests\CalendarServiceTestCase;
+use Fifthgate\Objectivity\CalendarGenerator\Tests\CalendarServiceTestCase;
 
 class CalendarCollectionTest extends CalendarServiceTestCase
 {

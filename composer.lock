@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37fdd75d29b2e20b24481af53727a831",
+    "content-hash": "72bd88465dabb2fa9772212b0088d763",
     "packages": [
         {
             "name": "fifthgate/objectivity-core",
-            "version": "v0.2.4",
+            "version": "v0.2.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:fifthgate/objectivity-core.git",
-                "reference": "3ce92a53b96bdfdced2b38151725844b233779f6"
+                "reference": "89c25b6d5f70a8342906a5d507fc5619729dad29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fifthgate/objectivity-core/zipball/3ce92a53b96bdfdced2b38151725844b233779f6",
-                "reference": "3ce92a53b96bdfdced2b38151725844b233779f6",
+                "url": "https://api.github.com/repos/fifthgate/objectivity-core/zipball/89c25b6d5f70a8342906a5d507fc5619729dad29",
+                "reference": "89c25b6d5f70a8342906a5d507fc5619729dad29",
                 "shasum": ""
             },
             "require": {
@@ -52,10 +52,10 @@
             "description": "A simple library providing domain-driven design objects for Laravel to use in other projects.",
             "homepage": "https://github.com/fifthgate/objectivity-core",
             "support": {
-                "source": "https://github.com/fifthgate/objectivity-core/tree/v0.2.4",
+                "source": "https://github.com/fifthgate/objectivity-core/tree/v0.2.6",
                 "issues": "https://github.com/fifthgate/objectivity-core/issues"
             },
-            "time": "2021-05-31T14:56:54+00:00"
+            "time": "2021-06-07T14:23:18+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -4820,16 +4820,16 @@
         },
         {
             "name": "spatie/ray",
-            "version": "1.24.0",
+            "version": "1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ray.git",
-                "reference": "9502da4aefbeddb9067569e6fc3e8176f3226ee1"
+                "reference": "168c4b47a54586da1ea2c4695523c429ee527f73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ray/zipball/9502da4aefbeddb9067569e6fc3e8176f3226ee1",
-                "reference": "9502da4aefbeddb9067569e6fc3e8176f3226ee1",
+                "url": "https://api.github.com/repos/spatie/ray/zipball/168c4b47a54586da1ea2c4695523c429ee527f73",
+                "reference": "168c4b47a54586da1ea2c4695523c429ee527f73",
                 "shasum": ""
             },
             "require": {
@@ -4879,7 +4879,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/ray/issues",
-                "source": "https://github.com/spatie/ray/tree/1.24.0"
+                "source": "https://github.com/spatie/ray/tree/1.25.0"
             },
             "funding": [
                 {
@@ -4891,7 +4891,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2021-06-03T22:13:24+00:00"
+            "time": "2021-06-07T07:03:00+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

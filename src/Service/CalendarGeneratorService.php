@@ -1,19 +1,19 @@
 <?php
 
-namespace Fifthgate\CalendarGenerator\Service;
+namespace Fifthgate\Objectivity\CalendarGenerator\Service;
 
-use Fifthgate\CalendarGenerator\Service\Interfaces\CalendarGeneratorServiceInterface;
-use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarYearInterface;
-use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarMonthInterface;
-use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarWeekInterface;
-use Fifthgate\CalendarGenerator\Domain\Interfaces\CalendarDayInterface;
-use Fifthgate\CalendarGenerator\Domain\Collection\CalendarMonthCollection;
-use Fifthgate\CalendarGenerator\Domain\Collection\CalendarWeekCollection;
-use Fifthgate\CalendarGenerator\Domain\Collection\CalendarDayCollection;
-use Fifthgate\CalendarGenerator\Domain\CalendarYear;
-use Fifthgate\CalendarGenerator\Domain\CalendarMonth;
-use Fifthgate\CalendarGenerator\Domain\CalendarDay;
-use Fifthgate\CalendarGenerator\Domain\CalendarWeek;
+use Fifthgate\Objectivity\CalendarGenerator\Service\Interfaces\CalendarGeneratorServiceInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarYearInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarMonthInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarWeekInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarDayInterface;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\CalendarMonthCollection;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\CalendarWeekCollection;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\CalendarDayCollection;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\CalendarYear;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\CalendarMonth;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\CalendarDay;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\CalendarWeek;
 use Carbon\Carbon;
 use \DateInterval;
 use \DatePeriod;

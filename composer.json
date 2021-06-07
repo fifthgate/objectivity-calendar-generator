@@ -1,7 +1,7 @@
 {
-    "name": "fifthgate/calendar-generator",
+    "name": "fifthgate/objectivity-calendar-generator",
     "description": "A simple calendar generation services",
-    "homepage": "https://github.com/fifthgate/calendarGenerator",
+    "homepage": "https://github.com/fifthgate/objectivity-calendar-generator",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -13,7 +13,7 @@
     "require": {
         "guzzlehttp/guzzle": "^7.2",
         "nesbot/carbon": "^2.43",
-        "fifthgate/objectivity-core": "^0.2.4"
+        "fifthgate/objectivity-core": "^0.2.6"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.3.3",
@@ -21,18 +21,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Fifthgate\\CalendarGenerator\\": "src/"
+            "Fifthgate\\Objectivity\\CalendarGenerator\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Fifthgate\\CalendarGenerator\\Tests\\": "tests"
+            "Fifthgate\\Objectivity\\CalendarGenerator\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Fifthgate\\CalendarGenerator\\CalendarGeneratorServiceProvider"
+                "Fifthgate\\Objectivity\\CalendarGenerator\\CalendarGeneratorServiceProvider"
             ]
         }
     },

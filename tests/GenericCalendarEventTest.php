@@ -2,11 +2,11 @@
 
 namespace Tests\Feature\Calendar;
 
-use Fifthgate\CalendarGenerator\Tests\CalendarServiceTestCase;
+use Fifthgate\Objectivity\CalendarGenerator\Tests\CalendarServiceTestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-use Fifthgate\CalendarGenerator\Domain\GenericCalendarEvent;
+use Fifthgate\Objectivity\CalendarGenerator\Domain\GenericCalendarEvent;
 use Carbon\Carbon;
 use \DateTimeInterface;
 
