@@ -8,6 +8,6 @@ This method means we can generate a complete calendar for a year once, cache it,
 
 The key distinction is that a calendar year is just a container that contains CalendarMonths, which contain CalendarWeeks and CalendarDays.
 
-Note that when you are using the CalendarWeeks withing the context of a month, then accessing that CalendarWeek's Days, the CalendarWeek will often contain days which aren't within the month. For example, if a month starts on a Thursday, the CalendarDays for that week will include the last Sunday, Monday, Wednesday and Thursday of the previous months.
+Note that when you are using the CalendarWeeks withing the context of a month, then accessing that CalendarWeek's Days, the CalendarWeek will often contain days which aren't within the month. For example, if a month starts on a Thursday, the CalendarDays for that week will include the last Sunday, Monday, Tuesday and Wednesday of the previous months.
 
 To filter days that are within a week but NOT within a month in this situation, use the isWithin(DateTimeInterface $start, DateTimeInterface $end, bool $inclusive = true) function. So, within twig, for example, whilst iterating through months: {% if day.isWithin(month.getPeriodStart, month.getPeriodEnd) %}...{% endif %}
