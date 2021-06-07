@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "fifthgate/objectivity-core",
-            "version": "v0.2.6",
+            "version": "v0.2.7",
             "source": {
                 "type": "git",
                 "url": "git@github.com:fifthgate/objectivity-core.git",
-                "reference": "89c25b6d5f70a8342906a5d507fc5619729dad29"
+                "reference": "a47c0a691ee1ecc3396350fe5f89cd2b561c2d61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fifthgate/objectivity-core/zipball/89c25b6d5f70a8342906a5d507fc5619729dad29",
-                "reference": "89c25b6d5f70a8342906a5d507fc5619729dad29",
+                "url": "https://api.github.com/repos/fifthgate/objectivity-core/zipball/a47c0a691ee1ecc3396350fe5f89cd2b561c2d61",
+                "reference": "a47c0a691ee1ecc3396350fe5f89cd2b561c2d61",
                 "shasum": ""
             },
             "require": {
@@ -52,10 +52,10 @@
             "description": "A simple library providing domain-driven design objects for Laravel to use in other projects.",
             "homepage": "https://github.com/fifthgate/objectivity-core",
             "support": {
-                "source": "https://github.com/fifthgate/objectivity-core/tree/v0.2.6",
+                "source": "https://github.com/fifthgate/objectivity-core/tree/v0.2.7",
                 "issues": "https://github.com/fifthgate/objectivity-core/issues"
             },
-            "time": "2021-06-07T14:23:18+00:00"
+            "time": "2021-06-07T16:34:58+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

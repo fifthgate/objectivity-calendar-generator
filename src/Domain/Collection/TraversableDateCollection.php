@@ -5,6 +5,7 @@ namespace Fifthgate\Objectivity\CalendarGenerator\Domain\Collection;
 use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\TraversableDateCollectionInterface;
 use \DateTimeInterface;
 use Fifthgate\Objectivity\Core\Domain\Collection\AbstractIterator;
+use \DatePeriod;
 
 class TraversableDateCollection extends AbstractIterator implements TraversableDateCollectionInterface
 {
@@ -93,4 +94,12 @@ class TraversableDateCollection extends AbstractIterator implements TraversableD
         return null;
     }
 
+    public static function makeFromDatePeriod(DatePeriod $period) : TraversableDateCollectionInterface
+    {
+        $collection = new self;
+        foreach ($period as $date) {
+            $collection->add($date);
+        }
+        return $collection;
+    }
 }

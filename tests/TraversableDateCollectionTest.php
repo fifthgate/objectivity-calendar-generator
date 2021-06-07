@@ -12,6 +12,8 @@ use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\Calenda
 use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarRenderableEventInterface;
 use Fifthgate\Objectivity\CalendarGenerator\Tests\CalendarServiceTestCase;
 use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\TraversableDateCollection;
+use \DateInterval;
+use \DatePeriod;
 
 class TraversableDateCollectionTest extends CalendarServiceTestCase
 {
@@ -60,5 +62,18 @@ class TraversableDateCollectionTest extends CalendarServiceTestCase
         });
         $this->assertEquals($date4, $sortedCollection->first());
         $this->assertEquals($date1, $sortedCollection->last());
+    }
+
+    public function testCreateFromDatePeriod()
+    {
+        $start = new Carbon('2021-01-01');
+        $end = new Carbon('2021-12-31');
+        $lastDate = new Carbon('2021-12-01');
+        $interval = DateInterval::createFromDateString('first day of next month');
+        $datePeriod = new DatePeriod($start, $interval, $end);
+        $collection = TraversableDateCollection::makeFromDatePeriod($datePeriod);
+        $this->assertEquals($start, $collection->first());
+        $this->assertEquals($lastDate, $collection->last());
+        $this->assertEquals(12, $collection->count());
     }
 }
