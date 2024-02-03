@@ -14,9 +14,9 @@ class CalendarServiceTestCase extends BaseTestCase
 {
     protected $calendarService;
 
-    protected function generateTestEvents(int $year) : CalendarRenderableEventCollectionInterface
+    protected function generateTestEvents(int $year): CalendarRenderableEventCollectionInterface
     {
-        $eventCollection = new CalendarEventCollection;
+        $eventCollection = new CalendarEventCollection();
         $testData = [
             [
                 'title' => 'Event 1',
@@ -68,7 +68,7 @@ class CalendarServiceTestCase extends BaseTestCase
      */
     protected function setUp(): void
     {
-        
+
         parent::setUp();
         $this->loadLaravelMigrations();
         $this->calendarService = $this->app->get(CalendarGeneratorServiceInterface::class);

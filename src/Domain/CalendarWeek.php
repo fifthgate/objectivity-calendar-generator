@@ -15,7 +15,7 @@ class CalendarWeek extends AbstractCalendarPeriod implements CalendarWeekInterfa
 
     protected $weekNumber;
 
-    public function getPeriodType() : string
+    public function getPeriodType(): string
     {
         return 'week';
     }
@@ -26,12 +26,12 @@ class CalendarWeek extends AbstractCalendarPeriod implements CalendarWeekInterfa
         $this->days = $days;
     }
 
-    public function getDays() : CalendarDayCollectionInterface
+    public function getDays(): CalendarDayCollectionInterface
     {
         return $this->days;
     }
 
-    public function getDay(int $dayNumber) : ? CalendarDayInterface
+    public function getDay(int $dayNumber): ?CalendarDayInterface
     {
         foreach ($this->days as $day) {
             if ($day->getPeriodStart()->format('j') == $dayNumber) {
@@ -41,7 +41,7 @@ class CalendarWeek extends AbstractCalendarPeriod implements CalendarWeekInterfa
         return null;
     }
 
-    public function injectEvents(CalendarRenderableEventCollectionInterface $events) : CalendarWeekInterface
+    public function injectEvents(CalendarRenderableEventCollectionInterface $events): CalendarWeekInterface
     {
         $this->events = $events;
 
@@ -52,7 +52,7 @@ class CalendarWeek extends AbstractCalendarPeriod implements CalendarWeekInterfa
         return $this;
     }
 
-    public function getEvents() : ? CalendarRenderableEventCollectionInterface
+    public function getEvents(): ?CalendarRenderableEventCollectionInterface
     {
         return $this->events;
     }

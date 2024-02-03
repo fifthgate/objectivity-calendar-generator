@@ -4,7 +4,7 @@ namespace Fifthgate\Objectivity\CalendarGenerator\Domain;
 
 use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarPeriodInterface;
 use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
-use \DateTimeInterface;
+use DateTimeInterface;
 
 abstract class AbstractCalendarPeriod implements CalendarPeriodInterface
 {
@@ -33,36 +33,36 @@ abstract class AbstractCalendarPeriod implements CalendarPeriodInterface
         $this->name = $name;
     }
 
-    public function getPeriodName() : string
+    public function getPeriodName(): string
     {
         return $this->name;
     }
 
-    public function getMachineName() : string
+    public function getMachineName(): string
     {
         return $this->machineName;
     }
 
-    public function getPeriodStart() : DateTimeInterface
+    public function getPeriodStart(): DateTimeInterface
     {
         return $this->periodStart;
     }
 
-    public function getPeriodEnd() : DateTimeInterface
+    public function getPeriodEnd(): DateTimeInterface
     {
         return $this->periodEnd;
     }
 
     abstract public function injectEvents(CalendarRenderableEventCollectionInterface $events);
 
-    abstract public function getEvents() : ? CalendarRenderableEventCollectionInterface;
+    abstract public function getEvents(): ?CalendarRenderableEventCollectionInterface;
 
     public function isWithin(DateTimeInterface $start, DateTimeInterface $end, bool $inclusive = true)
     {
         return $inclusive ? $this->getPeriodStart() >= $start && $this->getPeriodEnd() <= $end : $this->getPeriodStart() > $start && $this->getPeriodEnd() < $end;
     }
 
-    public function hasEvents() : bool
+    public function hasEvents(): bool
     {
         return (isset($this->events) && !$this->events->isEmpty());
     }

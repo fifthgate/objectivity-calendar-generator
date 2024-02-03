@@ -10,7 +10,7 @@ use Fifthgate\Objectivity\CalendarGenerator\Service\CalendarGeneratorService;
 
 class CalendarGeneratorServiceFactory
 {
-    const CACHEKEY = 'calendar_service_years_cache';
+    public const CACHEKEY = 'calendar_service_years_cache';
 
     private $app;
 
@@ -26,14 +26,14 @@ class CalendarGeneratorServiceFactory
          * Rebuild the index if there isn't a cached version available.
          */
         if (!$years or $testMode) {
-            $date = new Carbon;
+            $date = new Carbon();
             Log::info("CalendarYear cache rebuilt at {$date}");
 
             $years = [];
             $currentYear = $date->format('Y');
-            
+
             //Generate Calendars for previous and future years.
-            for ($year = $currentYear-3; $year <= $currentYear+3; $year++) {
+            for ($year = $currentYear - 3; $year <= $currentYear + 3; $year++) {
                 $years[$year] = CalendarGeneratorService::generateCalendarYear($year);
             }
             Cache::set(self::CACHEKEY, $years);

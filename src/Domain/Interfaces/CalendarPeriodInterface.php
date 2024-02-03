@@ -3,25 +3,25 @@
 namespace Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces;
 
 use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
-use \DateTimeInterface;
+use DateTimeInterface;
 
 interface CalendarPeriodInterface
 {
-    public function getPeriodType() : string;
+    public function getPeriodType(): string;
 
     public function setPeriodName(string $name);
 
-    public function getPeriodName() : string;
+    public function getPeriodName(): string;
 
     public function injectEvents(CalendarRenderableEventCollectionInterface $events);
 
-    public function getEvents() : ? CalendarRenderableEventCollectionInterface;
+    public function getEvents(): ?CalendarRenderableEventCollectionInterface;
 
-    public function getPeriodStart() : DateTimeInterface;
+    public function getPeriodStart(): DateTimeInterface;
 
-    public function getPeriodEnd() : DateTimeInterface;
+    public function getPeriodEnd(): DateTimeInterface;
 
     public function isWithin(DateTimeInterface $start, DateTimeInterface $end, bool $inclusive = true);
 
-    public function hasEvents() : bool;
+    public function hasEvents(): bool;
 }

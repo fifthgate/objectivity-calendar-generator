@@ -16,7 +16,7 @@ class CalendarMonth extends AbstractCalendarPeriod implements CalendarMonthInter
 
     protected $weeks;
 
-    public function getPeriodType() : string
+    public function getPeriodType(): string
     {
         return 'month';
     }
@@ -27,7 +27,7 @@ class CalendarMonth extends AbstractCalendarPeriod implements CalendarMonthInter
         $this->days = $days;
     }
 
-    public function getDays() : CalendarDayCollectionInterface
+    public function getDays(): CalendarDayCollectionInterface
     {
         return $this->days;
     }
@@ -46,7 +46,7 @@ class CalendarMonth extends AbstractCalendarPeriod implements CalendarMonthInter
         }
     }
 
-    public function getEvents() : ? CalendarRenderableEventCollectionInterface
+    public function getEvents(): ?CalendarRenderableEventCollectionInterface
     {
         return $this->events;
     }
@@ -57,12 +57,12 @@ class CalendarMonth extends AbstractCalendarPeriod implements CalendarMonthInter
         $this->weeks = $weeks;
     }
 
-    public function getWeeks() : CalendarWeekCollectionInterface
+    public function getWeeks(): CalendarWeekCollectionInterface
     {
         return $this->weeks;
     }
 
-    public function getDay(int $dayNumber) : ? CalendarDayInterface
+    public function getDay(int $dayNumber): ?CalendarDayInterface
     {
         foreach ($this->days as $day) {
             if ($day->getPeriodStart()->format('j') == $dayNumber) {
@@ -72,7 +72,7 @@ class CalendarMonth extends AbstractCalendarPeriod implements CalendarMonthInter
         return null;
     }
 
-    public function getWeekByISOWeekNumber(string $weekNumber) : ? CalendarWeekInterface
+    public function getWeekByISOWeekNumber(string $weekNumber): ?CalendarWeekInterface
     {
         foreach ($this->weeks as $week) {
             if ($week->getISOWeekNumber() == $weekNumber) {

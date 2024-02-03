@@ -3,9 +3,9 @@
 namespace Fifthgate\Objectivity\CalendarGenerator\Domain\Collection;
 
 use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\TraversableDateCollectionInterface;
-use \DateTimeInterface;
+use DateTimeInterface;
 use Fifthgate\Objectivity\Core\Domain\Collection\AbstractIterator;
-use \DatePeriod;
+use DatePeriod;
 
 class TraversableDateCollection extends AbstractIterator implements TraversableDateCollectionInterface
 {
@@ -26,12 +26,12 @@ class TraversableDateCollection extends AbstractIterator implements TraversableD
      *
      * @return DateTimeInterface|null The date corresponding to the key, or null if not set.
      */
-    public function getKey(int $key): ? DateTimeInterface
+    public function getKey(int $key): ?DateTimeInterface
     {
         return isset($this->collection[$key]) ? $this->collection[$key] : null;
     }
 
-    
+
     /**
      * Sort the collection using usert and a callable (Usuaully a closure)
      *
@@ -39,7 +39,7 @@ class TraversableDateCollection extends AbstractIterator implements TraversableD
      *
      * @return TraversableDateCollectionInterface This collection, as usort works on the original array rather than a copy.
      */
-    public function sortCollection(callable $sortRoutine) : TraversableDateCollectionInterface
+    public function sortCollection(callable $sortRoutine): TraversableDateCollectionInterface
     {
         usort($this->collection, $sortRoutine);
         return $this;
@@ -52,9 +52,9 @@ class TraversableDateCollection extends AbstractIterator implements TraversableD
      *
      * @return TraversableDateCollectionInterface A freshly filtered collection
      */
-    public function filter(callable $filterRoutine) : TraversableDateCollectionInterface
+    public function filter(callable $filterRoutine): TraversableDateCollectionInterface
     {
-        $filteredCollection = new $this;
+        $filteredCollection = new $this();
         foreach ($this->collection as $item) {
             if ($filterRoutine($item)) {
                 $filteredCollection->add($item);
@@ -68,7 +68,7 @@ class TraversableDateCollection extends AbstractIterator implements TraversableD
      *
      * @return DateTimeInterface The First item in the collection
      */
-    public function first() : ? DateTimeInterface
+    public function first(): ?DateTimeInterface
     {
         $unsortedCollection = $this->collection;
         $unsortedCollection = array_reverse($unsortedCollection);
@@ -84,7 +84,7 @@ class TraversableDateCollection extends AbstractIterator implements TraversableD
      *
      * @return DateTimeInterface The last item in the collection
      */
-    public function last() : ? DateTimeInterface
+    public function last(): ?DateTimeInterface
     {
         $unsortedCollection = $this->collection;
         $item = array_pop($unsortedCollection);
@@ -94,9 +94,9 @@ class TraversableDateCollection extends AbstractIterator implements TraversableD
         return null;
     }
 
-    public static function makeFromDatePeriod(DatePeriod $period) : TraversableDateCollectionInterface
+    public static function makeFromDatePeriod(DatePeriod $period): TraversableDateCollectionInterface
     {
-        $collection = new self;
+        $collection = new self();
         foreach ($period as $date) {
             $collection->add($date);
         }

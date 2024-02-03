@@ -23,7 +23,7 @@ class CalendarMonthTest extends CalendarServiceTestCase
         $events = $this->generateTestEvents('2012');
         $calendarMonth->injectEvents($events);
         $this->assertTrue($calendarMonth->isWithin($startDate, $endDate));
-        
+
         $this->assertTrue($calendarMonth->hasEvents());
         $this->assertTrue($calendarMonth->isWithin($startDate, $endDate));
         $this->assertFalse($calendarMonth->isWithin($startDate, $endDate, false));

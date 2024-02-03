@@ -13,7 +13,7 @@ use Carbon\Carbon;
 use Fifthgate\Objectivity\CalendarGenerator\Tests\CalendarServiceTestCase;
 use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
 use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarRenderableEventInterface;
-use \DateTimeInterface;
+use DateTimeInterface;
 
 class CalendarBubbleDownTest extends CalendarServiceTestCase
 {

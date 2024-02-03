@@ -12,8 +12,8 @@ use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\Calenda
 use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarRenderableEventInterface;
 use Fifthgate\Objectivity\CalendarGenerator\Tests\CalendarServiceTestCase;
 use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\TraversableDateCollection;
-use \DateInterval;
-use \DatePeriod;
+use DateInterval;
+use DatePeriod;
 
 class TraversableDateCollectionTest extends CalendarServiceTestCase
 {
@@ -30,7 +30,7 @@ class TraversableDateCollectionTest extends CalendarServiceTestCase
             $date4,
         ];
 
-        $collection = new TraversableDateCollection;
+        $collection = new TraversableDateCollection();
         $this->assertTrue($collection->isEmpty());
         $this->assertNull($collection->first());
         $this->assertNull($collection->last());
@@ -40,7 +40,7 @@ class TraversableDateCollectionTest extends CalendarServiceTestCase
         $this->assertFalse($collection->isEmpty());
         $this->assertEquals($date1, $collection->first());
         $this->assertEquals($date4, $collection->last());
-        for ($i=0; $i<3; $i++) {
+        for ($i = 0; $i < 3; $i++) {
             $this->assertEquals($dates[$i], $collection->getKey($i));
         }
 

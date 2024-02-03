@@ -12,7 +12,7 @@ class CalendarCollectionTest extends CalendarServiceTestCase
 {
     protected $calendarYear;
 
-    public function setUp() : void
+    public function setUp(): void
     {
         parent::setUp();
         $year = date('Y');

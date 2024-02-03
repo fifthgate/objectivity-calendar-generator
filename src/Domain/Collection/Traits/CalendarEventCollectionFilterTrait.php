@@ -2,7 +2,7 @@
 
 namespace Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Traits;
 
-use \DateTimeInterface;
+use DateTimeInterface;
 use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\CalendarRenderableEventCollectionInterface;
 
 /**
@@ -10,14 +10,14 @@ use Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces\Calenda
  */
 trait CalendarEventCollectionFilterTrait
 {
-    public function filterBetweenDates(DateTimeInterface $start, DateTimeInterface $end, bool $includeEndPoints = true, bool $allowOverlaps = true) : ? CalendarRenderableEventCollectionInterface
+    public function filterBetweenDates(DateTimeInterface $start, DateTimeInterface $end, bool $includeEndPoints = true, bool $allowOverlaps = true): ?CalendarRenderableEventCollectionInterface
     {
         return $allowOverlaps ? $this->filterBetweenDatesAllowingOverlaps($start, $end) : $this->filterBetweenDatesStrict($start, $end, $includeEndPoints);
     }
-    
+
     private function filterBetweenDatesAllowingOverlaps(DateTimeInterface $start, DateTimeInterface $end)
     {
-        $filteredCollection = new self;
+        $filteredCollection = new self();
         foreach ($this->collection as $event) {
             if (($event->getStartDate() >= $start && $event->getStartDate() <= $end) or ($event->getEndDate() >= $start && $event->getEndDate() <= $end)) {
                 $filteredCollection->add($event);
@@ -28,7 +28,7 @@ trait CalendarEventCollectionFilterTrait
 
     private function filterBetweenDatesStrict(DateTimeInterface $start, DateTimeInterface $end, bool $includeEndPoints = true)
     {
-        $filteredCollection = new self;
+        $filteredCollection = new self();
         foreach ($this->collection as $event) {
             if ($includeEndPoints) {
                 if ($event->getStartDate() >= $start && $event->getEndDate() <= $end) {

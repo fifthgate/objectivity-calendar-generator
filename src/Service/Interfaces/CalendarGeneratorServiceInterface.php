@@ -6,5 +6,5 @@ use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarYearInterf
 
 interface CalendarGeneratorServiceInterface
 {
-    public static function generateCalendarYear(int $year) : CalendarYearInterface;
+    public static function generateCalendarYear(int $year): CalendarYearInterface;
 }

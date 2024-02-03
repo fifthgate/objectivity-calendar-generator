@@ -12,7 +12,7 @@ class CalendarYear extends AbstractCalendarPeriod implements CalendarYearInterfa
 {
     protected $months;
 
-    public function getPeriodType() : string
+    public function getPeriodType(): string
     {
         return 'year';
     }
@@ -22,12 +22,12 @@ class CalendarYear extends AbstractCalendarPeriod implements CalendarYearInterfa
         $this->months = $months;
     }
 
-    public function getMonths() : CalendarMonthCollectionInterface
+    public function getMonths(): CalendarMonthCollectionInterface
     {
         return $this->months;
     }
 
-    public function getMonth(int $monthNumber) : ? CalendarMonthInterface
+    public function getMonth(int $monthNumber): ?CalendarMonthInterface
     {
         foreach ($this->months as $month) {
             if ($month->getPeriodStart()->format('n') == $monthNumber) {
@@ -46,7 +46,7 @@ class CalendarYear extends AbstractCalendarPeriod implements CalendarYearInterfa
         }
     }
 
-    public function getEvents() : ? CalendarRenderableEventCollectionInterface
+    public function getEvents(): ?CalendarRenderableEventCollectionInterface
     {
         return $this->events;
     }

@@ -28,11 +28,11 @@ class CalendarGeneratorServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(
-             CalendarGeneratorServiceInterface::class,
-             function ($app) {
-                 $calendarServiceFactory = new CalendarGeneratorServiceFactory($app);
-                 return $calendarServiceFactory(env('APP_DEBUG', false));
-             }
-         );
+            CalendarGeneratorServiceInterface::class,
+            function ($app) {
+                $calendarServiceFactory = new CalendarGeneratorServiceFactory($app);
+                return $calendarServiceFactory(env('APP_DEBUG', false));
+            }
+        );
     }
 }

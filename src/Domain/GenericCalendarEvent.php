@@ -3,7 +3,7 @@
 namespace Fifthgate\Objectivity\CalendarGenerator\Domain;
 
 use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarRenderableEventInterface;
-use \DateTimeInterface;
+use DateTimeInterface;
 use Fifthgate\Objectivity\Core\Domain\Interfaces\DomainEntityInterface;
 use Fifthgate\Objectivity\Core\Domain\AbstractDomainEntity;
 
@@ -29,27 +29,27 @@ class GenericCalendarEvent extends AbstractDomainEntity implements CalendarRende
         $this->endDate = $endDate;
     }
 
-    public function getStartDate() : DateTimeInterface
+    public function getStartDate(): DateTimeInterface
     {
         return $this->startDate;
     }
 
-    public function getEndDate() : DateTimeInterface
+    public function getEndDate(): DateTimeInterface
     {
         return $this->endDate;
     }
 
-    public function getTitle() : string
+    public function getTitle(): string
     {
         return $this->title;
     }
 
-    public function getBody() : string
+    public function getBody(): string
     {
         return $this->body;
     }
 
-    public function getPreview() : string
+    public function getPreview(): string
     {
         return strip_tags(substr($this->body, 0, 200)).'...';
     }

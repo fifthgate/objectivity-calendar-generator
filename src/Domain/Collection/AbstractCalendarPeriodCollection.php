@@ -49,7 +49,7 @@ abstract class AbstractCalendarPeriodCollection implements CalendarPeriodCollect
         $this->collection[] = $calendarPeriod;
     }
 
-    public function delete($key) : bool
+    public function delete($key): bool
     {
         if (isset($this->collection[$key])) {
             unset($this->collection[$key]);
@@ -58,7 +58,7 @@ abstract class AbstractCalendarPeriodCollection implements CalendarPeriodCollect
         return false;
     }
 
-    public function isEmpty() : bool
+    public function isEmpty(): bool
     {
         return empty($this->collection);
     }
@@ -68,22 +68,22 @@ abstract class AbstractCalendarPeriodCollection implements CalendarPeriodCollect
         $this->collection = [];
     }
 
-    public function sortCollection(callable $sortRoutine) : CalendarPeriodCollectionInterface
+    public function sortCollection(callable $sortRoutine): CalendarPeriodCollectionInterface
     {
         //
     }
 
-    public function filter(callable $filterRoutine) : CalendarPeriodCollectionInterface
+    public function filter(callable $filterRoutine): CalendarPeriodCollectionInterface
     {
         //
     }
 
-    public function slice(int $length) : array
+    public function slice(int $length): array
     {
         return array_chunk($this->collection, $length);
     }
 
-    public function hasID(int $id) :bool
+    public function hasID(int $id): bool
     {
         foreach ($this->collection as $item) {
             if ($item->getID() == $id) {
@@ -98,12 +98,12 @@ abstract class AbstractCalendarPeriodCollection implements CalendarPeriodCollect
         $this->collection[$position] = $payload;
     }
 
-    public function nth(int $n) : ? CalendarPeriodInterface
+    public function nth(int $n): ?CalendarPeriodInterface
     {
         return isset($this->collection[$n - 1]) ? $this->collection[$n - 1] : null;
     }
 
-    public function count() : int
+    public function count(): int
     {
         return count($this->collection);
     }

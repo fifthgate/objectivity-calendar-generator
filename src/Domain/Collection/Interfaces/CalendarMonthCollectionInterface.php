@@ -2,7 +2,7 @@
 
 namespace Fifthgate\Objectivity\CalendarGenerator\Domain\Collection\Interfaces;
 
-use \Iterator;
+use Iterator;
 
 interface CalendarMonthCollectionInterface extends CalendarPeriodCollectionInterface
 {

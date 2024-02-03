@@ -10,14 +10,14 @@ use Fifthgate\Objectivity\CalendarGenerator\Domain\Interfaces\CalendarDayInterfa
 interface CalendarMonthInterface extends CalendarPeriodInterface
 {
     public function setDays(CalendarDayCollectionInterface $days);
-    
-    public function getDays() : CalendarDayCollectionInterface;
+
+    public function getDays(): CalendarDayCollectionInterface;
 
     public function setWeeks(CalendarWeekCollectionInterface $weeks);
 
-    public function getWeeks() : CalendarWeekCollectionInterface;
+    public function getWeeks(): CalendarWeekCollectionInterface;
 
-    public function getDay(int $dayNumber) : ? CalendarDayInterface;
+    public function getDay(int $dayNumber): ?CalendarDayInterface;
 
-    public function getWeekByISOWeekNumber(string $weekNumber) : ? CalendarWeekInterface;
+    public function getWeekByISOWeekNumber(string $weekNumber): ?CalendarWeekInterface;
 }

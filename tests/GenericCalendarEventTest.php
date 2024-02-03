@@ -8,7 +8,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use Fifthgate\Objectivity\CalendarGenerator\Domain\GenericCalendarEvent;
 use Carbon\Carbon;
-use \DateTimeInterface;
+use DateTimeInterface;
 
 class GenericCalendarEventTest extends CalendarServiceTestCase
 {
